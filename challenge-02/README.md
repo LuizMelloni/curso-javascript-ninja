@@ -5,30 +5,43 @@ Nesse exercício, você está livre para escolher os nomes para suas variáveis 
 ```js
 // Crie uma função que receba dois argumentos e retorne a soma dos mesmos.
 ?
+function soma (x, y) {
+    return x + y
+}
 
 // Declare uma variável que receba a invocação da função criada acima, passando dois números quaisquer por argumento, e somando `5` ao resultado retornado da função.
 ?
+var resultado = soma(1, 2 + 5)
 
 // Qual o valor atualizado dessa variável?
 ?
+8
 
 // Declare uma nova variável, sem valor.
 ?
-
+var valor 
 /*
+
 Crie uma função que adicione um valor à variável criada acima, e retorne a string:
     O valor da variável agora é VALOR.
 Onde VALOR é o novo valor da variável.
 */
 ?
+function valorAdicionado() {
+    valor =  10
+    return "o valor da variavel agora é " + valor
+
+}
 
 // Invoque a função criada acima.
 ?
+console.log(valorAdicionado())
 
 // Qual o retorno da função? (Use comentários de bloco).
 ?
-
+*/ o valor da variavel agora é 10
 /*
+
 Crie uma função com as seguintes características:
 1. A função deve receber 3 argumentos;
 2. Se qualquer um dos três argumentos não estiverem preenchidos, a função deve retornar a string:
@@ -36,19 +49,25 @@ Crie uma função com as seguintes características:
 3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
 */
 ?
-
+function multiSoma( x, y, z) {
+    if( x === undefined || y === undefined || z === undefined){
+        return "Preencha os dados corretamente"
+    }
+    return x * y * z + 2
+}
 // Invoque a função criada acima, passando só dois números como argumento.
 ?
-
+console.log(multiSoma(1, 2))
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
 ?
+// "Preencha os dados corretamente"
 
 // Agora invoque novamente a função criada acima, mas passando todos os três argumentos necessários.
 ?
-
+console.log(multiSoma(1, 2, 3))
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
 ?
-
+// 8 
 /*
 Crie uma função com as seguintes características:
 1. A função deve receber 3 argumentos.
@@ -59,7 +78,25 @@ Crie uma função com as seguintes características:
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
 ?
-
+function somaDvd (x, y, z,) {
+    if( typeof x === 'number' && y === undefined && z === undefined) {
+        return x
+    } else if( typeof x === 'number' && typeof y === 'number'&& z === undefined)
+    {
+        return x + y
+    }else if( typeof x === 'number' && typeof y === 'number' && typeof z === 'number') {
+        var soma = x + y
+        return soma / z
+    }else if( x === undefined && y === undefined && z === undefined){
+        return false 
+    }else{
+        return null
+    }
+} 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
 ?
-```
+//console.log(somaDvd(1))
+//console.log(somaDvd(1,2))
+//console.log(somaDvd(1,2,3))
+//console.log(somaDvd())
+//console.log(somaDvd(""))
