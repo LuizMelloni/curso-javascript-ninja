@@ -184,7 +184,14 @@ método), que será concatenada com a frase de retorno, mostrando a resposta
 correta, de acordo com os dados inseridos no objeto.
 */
 ?
+pessoa.apresentacao = function() {
+    var sexoCondicional = pessoa.sexo === "Feminino" ? 'a' : 'o';
+    var idadeCondicional = pessoa.idade === 1 ? 'ano' : 'anos'
+    var metrosCondicional = pessoa.caminhouQuantosMetros === 1 ? 'metro' : 'metros'
+
+    return "Ola, sou " + sexoCondicional + " " + pessoa.nomeCompleto() + ", tenho " + pessoa.idade + " " + idadeCondicional + ", " + pessoa.altura + " m, e só hoje, caminhei " + pessoa.caminhouQuantosMetros + " " + metrosCondicional
+} 
 
 // Agora, apresente-se ;)
 ?
-```
+Ola, sou a Luiz Melloni, tenho 21 anos, 1.85 m, e só hoje, caminhei 4 metros
