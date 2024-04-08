@@ -3,6 +3,8 @@
 ```js
 // Declarar uma variável qualquer, que receba um objeto vazio.
 ?
+var qualquer = {}
+
 
 /*
 Declarar uma variável `pessoa`, que receba suas informações pessoais.
@@ -17,6 +19,16 @@ As propriedades e tipos de valores para cada propriedade desse objeto devem ser:
 - `caminhouQuantosMetros` - Number - recebe "zero" por padrão
 */
 ?
+var pessoa = {
+    nome: 'Luiz',
+    sobrenome: 'Melloni',
+    sexo: 'Feminino',
+    idade: 0,
+    altura: 1.85,
+    peso: 100,
+    andando: false,
+    caminhouQuantosMetros: 0
+}
 
 /*
 Adicione um método ao objeto `pessoa` chamado `fazerAniversario`. O método deve
